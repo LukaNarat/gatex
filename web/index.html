@@ -1,0 +1,179 @@
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type = "text/javascript">
+        function open1 () {
+            $.ajax( { type : 'POST',
+                  data : { },
+                  url  : 'open1.php',              // <=== CALL THE PHP FUNCTION HERE.
+                  success: function ( data ) {
+                    //alert( data );               // <=== VALUE RETURNED FROM FUNCTION.
+                  },
+                  error: function ( xhr ) {
+                    alert( "error" );
+                  }
+                });
+
+
+          
+        }
+     </script>
+<script type = "text/javascript">
+        function close1 () {
+            $.ajax( { type : 'POST',
+                  data : { },
+                  url  : 'close1.php',              // <=== CALL THE PHP FUNCTION HERE.
+                  success: function ( data ) {
+                    //alert( data );               // <=== VALUE RETURNED FROM FUNCTION.
+                  },
+                  error: function ( xhr ) {
+                    alert( "error" );
+                  }
+                });
+
+
+          
+        }
+     </script>
+
+     <script type = "text/javascript">
+        function open2 () {
+            $.ajax( { type : 'POST',
+                  data : { },
+                  url  : 'open2.php',              // <=== CALL THE PHP FUNCTION HERE.
+                  success: function ( data ) {
+                    //alert( data );               // <=== VALUE RETURNED FROM FUNCTION.
+                  },
+                  error: function ( xhr ) {
+                    alert( "error" );
+                  }
+                });
+
+
+          
+        }
+     </script>
+
+     <script type = "text/javascript">
+        function close2 () {
+            $.ajax( { type : 'POST',
+                  data : { },
+                  url  : 'close2.php',              // <=== CALL THE PHP FUNCTION HERE.
+                  success: function ( data ) {
+                    //alert( data );               // <=== VALUE RETURNED FROM FUNCTION.
+                  },
+                  error: function ( xhr ) {
+                    alert( "error" );
+                  }
+                });
+
+
+          
+        }
+     </script>
+
+
+
+<style type="text/css">
+  
+  #loader {
+    background-color: white;
+    width: 100%;
+    position: fixed;
+      } 
+
+  #myImage{
+    width: 100%;  
+      } 
+
+
+  #container {
+    background-color: green;
+    width: 100%;
+    top: 20%;
+    left: 0px;
+    height: 50%;
+    position: fixed;
+  } 
+
+  #topleft{
+    background-color: black;
+    width: 50%;
+    height: 50%;
+    float: left;
+
+  } 
+  #topright{
+    background-color: yellow;
+    width: 50%;
+    height: 50%;
+    float: right;
+  } 
+
+    #botleft{
+    background-color: yellow;
+    width: 50%;
+    height: 50%;
+    float: left;
+
+  } 
+  #botright{
+    background-color: black;
+    width: 50%;
+    height: 50%;
+    float: right;
+  } 
+
+</style>
+
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+  </head>
+  <body>
+  
+<div id="title">GATEX</div>
+
+<div id="container">
+  <div id="loader" style="display:none"> <img id = "myImage" src = "images/ajax-loader.gif"> </div>
+
+  <a onclick="open1();loadertoggle();"> <div id="topleft"> OPEN 1<!-- BUTTON CALL PHP FUNCTION --></div></a> 
+  <a onclick="close1();loadertoggle();"><div id="topright"> CLOSE 1 </div></a> 
+   <a onclick="open2();loadertoggle();"><div id="botleft">OPEN 2</div></a> 
+  <a onclick="close2();loadertoggle();"><div id="botright">CLOSE 2</div> </a> 
+</div>  
+
+ 
+
+ <br><br>
+
+
+<br>
+
+<script>
+function loadertoggle() {
+    var x = document.getElementById('loader');
+  
+        x.style.display = 'block';
+        setTimeout("loader.style.display = 'none';", 5000); 
+ 
+}
+</script>
+
+
+  </body>
+</html>
