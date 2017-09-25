@@ -2,10 +2,10 @@
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script type = "text/javascript">
-        function open1 () {
+        function enter1 () {
             $.ajax( { type : 'POST',
                   data : { },
-                  url  : 'open1.php',              // <=== CALL THE PHP FUNCTION HERE.
+                  url  : 'enter1.php',              // <=== CALL THE PHP FUNCTION HERE.
                   success: function ( data ) {
                     //alert( data );               // <=== VALUE RETURNED FROM FUNCTION.
                   },
@@ -19,10 +19,10 @@
         }
      </script>
 <script type = "text/javascript">
-        function close1 () {
+        function exit1 () {
             $.ajax( { type : 'POST',
                   data : { },
-                  url  : 'close1.php',              // <=== CALL THE PHP FUNCTION HERE.
+                  url  : 'exit1.php',              // <=== CALL THE PHP FUNCTION HERE.
                   success: function ( data ) {
                     //alert( data );               // <=== VALUE RETURNED FROM FUNCTION.
                   },
@@ -37,10 +37,10 @@
      </script>
 
      <script type = "text/javascript">
-        function open2 () {
+        function enter2 () {
             $.ajax( { type : 'POST',
                   data : { },
-                  url  : 'open2.php',              // <=== CALL THE PHP FUNCTION HERE.
+                  url  : 'enter2.php',              // <=== CALL THE PHP FUNCTION HERE.
                   success: function ( data ) {
                     //alert( data );               // <=== VALUE RETURNED FROM FUNCTION.
                   },
@@ -55,10 +55,10 @@
      </script>
 
      <script type = "text/javascript">
-        function close2 () {
+        function exit2 () {
             $.ajax( { type : 'POST',
                   data : { },
-                  url  : 'close2.php',              // <=== CALL THE PHP FUNCTION HERE.
+                  url  : 'exit2.php',              // <=== CALL THE PHP FUNCTION HERE.
                   success: function ( data ) {
                     //alert( data );               // <=== VALUE RETURNED FROM FUNCTION.
                   },
@@ -80,7 +80,7 @@
     background-color: white;
     width: 100%;
     position: fixed;
-    margin-top: -70px;
+    margin-top: -5px;
       } 
 
   #myImage{
@@ -131,9 +131,9 @@
   } 
     
   #titletext{
-    font-size:150px;
+    font-size:50px;
     font-family: “Helvetica Neue”, Arial, sans-serif;
-    width: 500px;
+    width: 166px;
     margin: auto;
     margin-top: 50px;
 
@@ -144,9 +144,10 @@
     background: white;
     height: 50px;
     width: 50%;
-    font-size:50px;
+    font-size:20px;
     margin: auto;
     margin-top: 20%;
+    text-align: center;
   }
 </style>
 
@@ -173,12 +174,12 @@
 <div id="title"><p id="titletext">GATEX</p></div>
 
 <div id="container">
-  <div id="loader" style="display:none"> <img id = "myImage" src = "images/ajax-loader.gif"> </div>
+  <div id="loader" style="display:none"> <img id = "myImage" src = "images/ajax-loader.gif"> <div class="inner" style="margin-top: 0">ACTIVATING KITTEN TASKFORCE</div> </div>
 
-  <a onclick="open1();loadertoggle();"> <div id="topleft"> <div class="inner"> ENTER 1</div><!-- BUTTON CALL PHP FUNCTION --></div></a> 
-  <a onclick="close1();loadertoggle();"><div id="topright"> <div class="inner"> EXIT 1 </div></div></a> 
-   <a onclick="open2();loadertoggle();"><div id="botleft"><div class="inner"> OPEN 2</div></div></a> 
-  <a onclick="close2();loadertoggle();"><div id="botright"><div class="inner"> EXIT 2</div></div> </a> 
+  <a onclick="enter1();loadertoggle();"> <div id="topleft"> <div class="inner"> ENTER 1</div><!-- BUTTON CALL PHP FUNCTION --></div></a> 
+  <a onclick="exit1();loadertoggle();"><div id="topright"> <div class="inner"> EXIT 1 </div></div></a> 
+   <a onclick="enter2();loadertoggle();"><div id="botleft"><div class="inner"> OPEN 2</div></div></a> 
+  <a onclick="exit2();loadertoggle();"><div id="botright"><div class="inner"> EXIT 2</div></div> </a> 
 </div>  
 
  
