@@ -18,7 +18,8 @@
           
         }
      </script>
-<script type = "text/javascript">
+
+      <script type = "text/javascript">
         function exit1 () {
             $.ajax( { type : 'POST',
                   data : { },
@@ -29,12 +30,11 @@
                   error: function ( xhr ) {
                     alert( "error" );
                   }
-                });
-
-
-          
+                }); 
         }
+
      </script>
+
 
      <script type = "text/javascript">
         function enter2 () {
@@ -47,12 +47,10 @@
                   error: function ( xhr ) {
                     alert( "error" );
                   }
-                });
-
-
-          
+                });     
         }
      </script>
+
 
      <script type = "text/javascript">
         function exit2 () {
@@ -65,13 +63,9 @@
                   error: function ( xhr ) {
                     alert( "error" );
                   }
-                });
-
-
-          
+                });   
         }
      </script>
-
 
 
 <style type="text/css">
@@ -105,8 +99,8 @@
     width: 50%;
     height: 50%;
     float: left;
-
   } 
+
   #topright{
     width: 50%;
     height: 50%;
@@ -117,8 +111,8 @@
     width: 50%;
     height: 50%;
     float: left;
-
   } 
+
   #botright{
     width: 50%;
     height: 50%;
@@ -126,7 +120,6 @@
   } 
 
   #title{
- 
 
   } 
     
@@ -139,8 +132,6 @@
     -webkit-text-stroke-width: 0px;
     -webkit-text-stroke-color: rgb(47, 48, 50);
     color: #2199e8;
-
-
   } 
 
   .button{
@@ -150,12 +141,19 @@
   .inner {
     background: white;
     height: 100px;
-
     font-size:70px;
     margin: auto;
     margin-top: 20%;
     text-align: center;
   }
+
+
+  body {
+    background-image: url("images/grey.png");
+    background-repeat: repeat-x;
+  }
+
+
 </style>
 
 <link rel="apple-touch-icon" sizes="57x57" href="images/apple-icon-57x57.png">
@@ -175,14 +173,12 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="images/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
- 
-
 
 <link href="https://fonts.googleapis.com/css?family=Quicksand:700" rel="stylesheet">
 
+</head>
 
-  </head>
-  <body>
+<body>
   
 <div id="title"><p id="titletext">GATEX</p></div>
 <HR style="height: 5px" COLOR="black" WIDTH="60%">
@@ -190,7 +186,7 @@
   <div id="loader" style="display:none"> <img id = "myImage" src = "images/ajax-loader.gif"> <div class="inner" style="position: relative;
     top: -210px;"><p>ACTIVATING KITTEN TASKFORCE</p></div> </div>
 
-  <a onclick="enter1();loadertoggle();"> <div id="topleft"> <div class="inner"><img class="button" src="images/Enter1.png"></div><!-- BUTTON CALL PHP FUNCTION --></div></a> 
+  <a onclick="enter1();loadertoggle();"> <div id="topleft"> <div class="inner"><img class="button" src="images/Enter1.png"></div></div></a> 
   <a onclick="exit1();loadertoggle();"><div id="topright"> <div class="inner"> <img class="button" src="images/Exit1.png"></div></div></a> 
    <a onclick="enter2();loadertoggle();"><div id="botleft"><div class="inner"> <img class="button" src="images/Enter2.png"></div></div></a> 
   <a onclick="exit2();loadertoggle();"><div id="botright"><div class="inner"><img class="button" src="images/Exit2.png"></div></div> </a> 
@@ -200,10 +196,7 @@
 
 </div>  
 
- 
-
  <br><br>
-
 
 <br>
 
