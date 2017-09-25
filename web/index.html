@@ -80,6 +80,7 @@
     background-color: white;
     width: 100%;
     position: fixed;
+    margin-top: -70px;
       } 
 
   #myImage{
@@ -125,24 +126,28 @@
   } 
 
   #title{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -50px;
-    margin-left: -50px;
-    width: 100px;
-    height: 100px;
+ 
 
   } 
     
   #titletext{
-    font-size:20px;
+    font-size:150px;
     font-family: “Helvetica Neue”, Arial, sans-serif;
+    width: 500px;
+    margin: auto;
+    margin-top: 50px;
 
 
   } 
 
-
+  .inner {
+    background: white;
+    height: 50px;
+    width: 50%;
+    font-size:50px;
+    margin: auto;
+    margin-top: 20%;
+  }
 </style>
 
 <link rel="apple-touch-icon" sizes="57x57" href="images/apple-icon-57x57.png">
@@ -170,10 +175,10 @@
 <div id="container">
   <div id="loader" style="display:none"> <img id = "myImage" src = "images/ajax-loader.gif"> </div>
 
-  <a onclick="open1();loadertoggle();"> <div id="topleft"> OPEN 1<!-- BUTTON CALL PHP FUNCTION --></div></a> 
-  <a onclick="close1();loadertoggle();"><div id="topright"> CLOSE 1 </div></a> 
-   <a onclick="open2();loadertoggle();"><div id="botleft">OPEN 2</div></a> 
-  <a onclick="close2();loadertoggle();"><div id="botright">CLOSE 2</div> </a> 
+  <a onclick="open1();loadertoggle();"> <div id="topleft"> <div class="inner"> ENTER 1</div><!-- BUTTON CALL PHP FUNCTION --></div></a> 
+  <a onclick="close1();loadertoggle();"><div id="topright"> <div class="inner"> EXIT 1 </div></div></a> 
+   <a onclick="open2();loadertoggle();"><div id="botleft"><div class="inner"> OPEN 2</div></div></a> 
+  <a onclick="close2();loadertoggle();"><div id="botright"><div class="inner"> EXIT 2</div></div> </a> 
 </div>  
 
  
