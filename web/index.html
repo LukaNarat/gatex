@@ -76,6 +76,12 @@
 
 <style type="text/css">
   
+  p {
+  font-family: 'Quicksand', sans-serif;
+  color: #2199e8;
+}
+
+
   #loader {
     background-color: white;
     width: 100%;
@@ -131,11 +137,14 @@
   } 
     
   #titletext{
-    font-size:50px;
-    font-family: “Helvetica Neue”, Arial, sans-serif;
-    width: 166px;
+    font-size:140px;
+    font-family: 'Quicksand', sans-serif;
+    width: 454px;
     margin: auto;
     margin-top: 50px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(47, 48, 50);
+    color: #2199e8;
 
 
   } 
@@ -143,8 +152,7 @@
   .inner {
     background: white;
     height: 50px;
-    width: 50%;
-    font-size:20px;
+    font-size:70px;
     margin: auto;
     margin-top: 20%;
     text-align: center;
@@ -168,18 +176,24 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="images/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
+ 
+
+
+<link href="https://fonts.googleapis.com/css?family=Quicksand:700" rel="stylesheet">
+
+
   </head>
   <body>
   
 <div id="title"><p id="titletext">GATEX</p></div>
-
+<HR COLOR="black" WIDTH="60%">
 <div id="container">
-  <div id="loader" style="display:none"> <img id = "myImage" src = "images/ajax-loader.gif"> <div class="inner" style="margin-top: 0">ACTIVATING KITTEN TASKFORCE</div> </div>
+  <div id="loader" style="display:none"> <img id = "myImage" src = "images/ajax-loader.gif"> <div class="inner" style="margin-top: 0"><p>ACTIVATING KITTEN TASKFORCE</p></div> </div>
 
-  <a onclick="enter1();loadertoggle();"> <div id="topleft"> <div class="inner"> ENTER 1</div><!-- BUTTON CALL PHP FUNCTION --></div></a> 
-  <a onclick="exit1();loadertoggle();"><div id="topright"> <div class="inner"> EXIT 1 </div></div></a> 
-   <a onclick="enter2();loadertoggle();"><div id="botleft"><div class="inner"> OPEN 2</div></div></a> 
-  <a onclick="exit2();loadertoggle();"><div id="botright"><div class="inner"> EXIT 2</div></div> </a> 
+  <a onclick="enter1();loadertoggle();"> <div id="topleft"> <div class="inner"><p> ENTER 1</p></div><!-- BUTTON CALL PHP FUNCTION --></div></a> 
+  <a onclick="exit1();loadertoggle();"><div id="topright"> <div class="inner"> <p> EXIT 1 </p></div></div></a> 
+   <a onclick="enter2();loadertoggle();"><div id="botleft"><div class="inner"> <p> OPEN 2</p></div></div></a> 
+  <a onclick="exit2();loadertoggle();"><div id="botright"><div class="inner"> <p> EXIT 2</p></div></div> </a> 
 </div>  
 
  

@@ -6,8 +6,8 @@ function bb()
 
 {
     $to      = 'luka.narat@gmail.com';
-    $subject = 'close1';
-    $message = 'Closing gate 1';
+    $subject = 'exit1';
+    $message = 'Exiting gate 1';
     $headers = 'From: webmaster@example.com' . "\r\n" .
         'Reply-To: webmaster@example.com' . "\r\n" .
         'X-Mailer: PHP/' . phpversion();
