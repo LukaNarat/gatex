@@ -84,7 +84,7 @@
 
   #loader {
     background-color: white;
-    width: 100%;
+    width: 80%;
     position: fixed;
     margin-top: -5px;
       } 
@@ -95,37 +95,33 @@
 
 
   #container {
-    background-color: green;
-    width: 100%;
-    top: 20%;
+    width: 80%;
+    position: relative;
+    top: 25px;
     left: 0px;
+    margin:auto;
     height: 50%;
-    position: fixed;
   } 
 
   #topleft{
-    background-color: black;
     width: 50%;
     height: 50%;
     float: left;
 
   } 
   #topright{
-    background-color: yellow;
     width: 50%;
     height: 50%;
     float: right;
   } 
 
     #botleft{
-    background-color: yellow;
     width: 50%;
     height: 50%;
     float: left;
 
   } 
   #botright{
-    background-color: black;
     width: 50%;
     height: 50%;
     float: right;
@@ -142,16 +138,21 @@
     width: 454px;
     margin: auto;
     margin-top: 50px;
-    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-width: 0px;
     -webkit-text-stroke-color: rgb(47, 48, 50);
     color: #2199e8;
 
 
   } 
 
+  .button{
+    height: 300px;
+    }
+
   .inner {
     background: white;
-    height: 50px;
+    height: 100px;
+
     font-size:70px;
     margin: auto;
     margin-top: 20%;
@@ -186,14 +187,19 @@
   <body>
   
 <div id="title"><p id="titletext">GATEX</p></div>
-<HR COLOR="black" WIDTH="60%">
+<HR style="height: 5px" COLOR="black" WIDTH="60%">
 <div id="container">
-  <div id="loader" style="display:none"> <img id = "myImage" src = "images/ajax-loader.gif"> <div class="inner" style="margin-top: 0"><p>ACTIVATING KITTEN TASKFORCE</p></div> </div>
+  <div id="loader" style="display:none"> <img id = "myImage" src = "images/ajax-loader.gif"> <div class="inner" style="position: relative;
+    top: -210px;"><p>ACTIVATING KITTEN TASKFORCE</p></div> </div>
 
-  <a onclick="enter1();loadertoggle();"> <div id="topleft"> <div class="inner"><p> ENTER 1</p></div><!-- BUTTON CALL PHP FUNCTION --></div></a> 
-  <a onclick="exit1();loadertoggle();"><div id="topright"> <div class="inner"> <p> EXIT 1 </p></div></div></a> 
-   <a onclick="enter2();loadertoggle();"><div id="botleft"><div class="inner"> <p> OPEN 2</p></div></div></a> 
-  <a onclick="exit2();loadertoggle();"><div id="botright"><div class="inner"> <p> EXIT 2</p></div></div> </a> 
+  <a onclick="enter1();loadertoggle();"> <div id="topleft"> <div class="inner"><img class="button" src="images/Enter1.png"></div><!-- BUTTON CALL PHP FUNCTION --></div></a> 
+  <a onclick="exit1();loadertoggle();"><div id="topright"> <div class="inner"> <img class="button" src="images/Exit1.png"></div></div></a> 
+   <a onclick="enter2();loadertoggle();"><div id="botleft"><div class="inner"> <img class="button" src="images/Enter2.png"></div></div></a> 
+  <a onclick="exit2();loadertoggle();"><div id="botright"><div class="inner"><img class="button" src="images/Exit2.png"></div></div> </a> 
+
+  <br><br>
+  <HR style="height: 5px; position: relative;  top: 50px" COLOR="black" WIDTH="60%">
+
 </div>  
 
  
