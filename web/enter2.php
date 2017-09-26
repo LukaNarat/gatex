@@ -2,9 +2,6 @@
 
 function bb()
 {
-}
-
-{
     $to      = 'luka.narat@gmail.com';
     $subject = 'enter2';
     $message = 'Entering gate 2';
