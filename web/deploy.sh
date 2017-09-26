@@ -5,7 +5,7 @@ SSH=pi@192.168.1.110
 
 while getopts ":r" opt; do
   case $opt in
-    a)
+    r)
       echo "------ Remote work push! -------" >&2
       SSH="luma.madhacker.biz -p 1337"
       echo "$ALPHA"
