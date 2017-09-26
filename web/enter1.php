@@ -2,7 +2,7 @@
 
 function bb()
 {
-    $to      = 'luka.narat@gmail.com';
+    $to      = 'trigger@applet.ifttt.com';
     $subject = 'enter1';
     $message = 'Entering Gate 1';
     $headers = 'From: webmaster@example.com' . "\r\n" .
