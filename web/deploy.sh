@@ -16,6 +16,7 @@ while getopts ":r" opt; do
   esac
 done
 
+echo $SSH
 
 cd /Users/osx/Projects/http/gatex/
 git add -A 
