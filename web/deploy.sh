@@ -7,7 +7,7 @@ while getopts ":r" opt; do
   case $opt in
     r)
       echo "------ Remote work push! -------" >&2
-      SSH="luma.madhacker.biz -p 1337"
+      SSH="pi@luma.madhacker.biz -p 1337"
       echo "$ALPHA"
       ;;
     \?)
