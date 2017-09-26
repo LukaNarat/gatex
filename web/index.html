@@ -81,7 +81,15 @@
     width: 80%;
     position: fixed;
     margin-top: -5px;
-      } 
+    opacity: 0;
+    z-index: -1      } 
+
+    #loader.fade{
+    opacity:1;
+    transition: opacity 3s; 
+    display: block;
+    z-index: 2
+    }
 
   #myImage{
     width: 100%;  
@@ -166,7 +174,7 @@
 <div id="title"><p id="titletext">GATEX</p></div>
 <HR style="height: 5px" COLOR="black" WIDTH="60%">
 <div id="container">
-  <div id="loader" style="display:none"> <img id = "myImage" src = "images/ajax-loader.gif"> <div class="inner" style="position: relative;
+  <div id="loader"> <img id = "myImage" src = "images/ajax-loader.gif"> <div class="inner" style="position: relative;
     top: -210px;"><p>ACTIVATING KITTEN TASKFORCE</p></div> </div>
 
   <a onclick="enter1();loadertoggle();"> <div class="left"> <div class="inner"><img class="button" src="images/Enter2.png"></div></div></a> 
@@ -182,16 +190,16 @@
  <br><br>
 
 <br>
-
-<script>
-function loadertoggle() {
-    var x = document.getElementById('loader');
-  
-        x.style.display = 'block';
-        setTimeout("loader.style.display = 'none';", 9000); 
- 
+<script type="text/javascript">
+    function loadertoggle() {
+    var slideSource = document.getElementById('loader');
+    slideSource.className = slideSource.className ? '' : 'fade';
+    setTimeout("loader.className = 'loader';", 15000);
 }
+
 </script>
+
+
 
 
   </body>
