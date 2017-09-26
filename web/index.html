@@ -70,9 +70,10 @@
 
 <style type="text/css">
   
-  p {
+ p {
   font-family: 'Quicksand', sans-serif;
   color: #2199e8;
+  margin:auto;
 }
 
 
@@ -84,11 +85,16 @@
     opacity: 0;
     z-index: -1      } 
 
-    #loader.fade{
+    #loader.display{
     opacity:1;
     transition: opacity 0.3s; 
-    display: block;
     z-index: 0
+    }
+
+    #loader.fade{
+    opacity:0;
+    transition: opacity 0.3s; 
+    z-index: -1
     }
 
   #myImage{
@@ -137,13 +143,34 @@
     margin-top: 20%;
     text-align: center;
   }
+    #myProgress {
+  width: 100%;
+  background-color: #000000;
+  height: 70px;
+  position: relative;
+  top: 70px;
+}
 
+#myBar {
+  height: 50px;
+  background-color: #2199e8;
+  width: 1%;
+  position: relative;
+  top: 10px;
+} 
 
   body {
     background-image: url("images/grey.png");
 
   }
 
+  .appear {
+    opacity: 1 !important;
+  }
+
+ .disapear {
+    opacity: 0
+  }
 
 </style>
 
@@ -175,12 +202,49 @@
 <HR style="height: 5px" COLOR="black" WIDTH="60%">
 <div id="container">
   <div id="loader"> <img id = "myImage" src = "images/ajax-loader.gif"> <div class="inner" style="position: relative;
-    top: -210px;"><p>ACTIVATING KITTEN TASKFORCE</p></div> </div>
+    top: -210px;"><p>ACTIVATING KITTEN TASKFORCE</p>
 
-  <a onclick="enter1();loadertoggle();"> <div class="left"> <div class="inner"><img class="button" src="images/Enter2.png"></div></div></a> 
-  <a onclick="exit1();loadertoggle();"><div class="right"> <div class="inner"> <img class="button" src="images/Exit2.png"></div></div></a> 
-   <a onclick="enter2();loadertoggle();"><div class="left"><div class="inner"> <img class="button" src="images/Enter2.png"></div></div></a> 
-  <a onclick="exit2();loadertoggle();"><div class="right"><div class="inner"><img class="button" src="images/Exit2.png"></div></div> </a> 
+<p id="establishing" style="position: relative;top: 155px; font-size: 30px">ESTABLISHING CONNECTION</p>
+<p id="active" style="position: relative;top: 122px; font-size: 30px; opacity: 0;">PHONE CALL ACTIVE</p>
+
+
+</div> 
+
+
+<div id="myProgress">
+  <div id="myBar"></div>
+</div>
+
+<script>
+function move() {
+  var elem = document.getElementById("myBar");
+  var width = 1;
+  var id = setInterval(frame, 150);
+  function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+    active.className ='appear';
+    establishing.className ='disapear';
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+    }
+  }
+}
+
+
+</script>
+
+
+
+
+
+    </div>
+
+  <a onclick="enter1();loadertoggle();move();"> <div class="left"> <div class="inner"><img class="button" src="images/Enter2.png"></div></div></a> 
+  <a onclick="exit1();loadertoggle();move();"><div class="right"> <div class="inner"> <img class="button" src="images/Exit2.png"></div></div></a> 
+   <a onclick="enter2();loadertoggle();move();"><div class="left"><div class="inner"> <img class="button" src="images/Enter2.png"></div></div></a> 
+  <a onclick="exit2();loadertoggle();move();"><div class="right"><div class="inner"><img class="button" src="images/Exit2.png"></div></div> </a> 
 
   <HR style="height: 5px; position: relative;  top: 50px" COLOR="black" WIDTH="60%">
 
@@ -190,8 +254,11 @@
 <script type="text/javascript">
     function loadertoggle() {
     var slideSource = document.getElementById('loader');
-    slideSource.className = slideSource.className ? '' : 'fade';
-    setTimeout("loader.className = 'loader';", 15000);
+    loader.className ='display';
+    setTimeout("loader.className = 'fade';", 60000);
+    active.className ='disapear';
+    establishing.className ='appear';
+
 }
 
 </script>
