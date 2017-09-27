@@ -9,11 +9,19 @@
 <script type="text/javascript">
     function statecheck () {
   $.get("statecheck/callingactive.html")
-    .done(function() { 
-       statecheck();
-       left.className ='disappear';
-    }).fail(function() { 
-        right.className ='disappear';
+    .done(function() { // Vzpostavljena Povezava
+       
+       
+        active.className ='appear';  // Pokazemo da je vzpostavljena 
+        establishing.className ='disapear';
+          
+            statecheck();  // Cekiramo skos ce je se vzpostavljena
+
+    }).fail(function() {  // Prekinjena povezava
+
+           active.className ='disapear';
+           establishing.className ='appear';     
+           dropped.className ='appear';  // Povemo da je konc klica, koncamo funkcijo
     })
 
 }

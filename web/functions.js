@@ -68,8 +68,7 @@
   function frame() {
     if (width >= 100) {
       clearInterval(id);
-    active.className ='appear';
-    establishing.className ='disapear';
+
     } else {
       width++; 
       elem.style.width = width + '%'; 
@@ -82,7 +81,6 @@
     var slideSource = document.getElementById('loader');
     loader.className ='display';
     setTimeout("loader.className = 'fade';", 60000);
-    active.className ='disapear';
-    establishing.className ='appear';
+
 
 }

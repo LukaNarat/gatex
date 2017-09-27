@@ -35,8 +35,55 @@
       <p id="active" style="position: relative;top: 76px; font-size: 30px; opacity: 0;">PHONE CALL ACTIVE</p>
 
 
-      </div> 
 
+
+      </div> 
+<script type="text/javascript">
+function statecheck () {
+      $.get("statecheck/callingactive.html")
+    
+          .done(function() { // Vzpostavljena Povezava
+            
+            active.className ='appear';  // Pokazemo da je vzpostavljena 
+            establishing.className ='disapear';
+
+              function innerstatecheck () {
+              $.get("statecheck/callingactive.html")
+              // Cekiramo skos ce je se vzpostavljena
+                  .done(function() { // Vzpostavljena Povezava
+
+                     }) 
+
+
+
+                  .fail(function() {  // Prekinjena povezava
+                  active.className ='disapear';
+                   establishing.className ='appear'; 
+                   loader.className = 'fade';    
+                   dropped.className ='appear';  // Povemo da je konc klica, koncamo funkcijo
+
+                    } )
+              } 
+
+          })   
+
+        
+
+          .fail(function() {  // Prekinjena povezava
+          setTimeout(statecheck, 2000);
+          console.log("here I am");
+          
+
+           
+        
+          })
+
+} 
+
+
+
+    
+</script>
 
       <div id="myProgress">
         <div id="myBar"></div>
@@ -44,11 +91,11 @@
 
           </div>
 
-        <a onclick="enter1();loadertoggle();move();"> <div class="left"> <div class="inner"><p>MARY</p><img class="button" src="images/Enter2.png"></div></div></a> 
+        <a onclick="enter1();loadertoggle();statecheck();"> <div class="left"> <div class="inner"><p>MARY</p><img class="button" src="images/Enter2.png"></div></div></a> 
         <a onclick="exit1();loadertoggle();move();"><div class="right"> <div class="inner"> <p>MARY</p><img class="button" src="images/Exit2.png"></div></div></a> 
          <a onclick="enter2();loadertoggle();move();"><div class="left"><div class="inner"><p>REBY</p><img class="button" src="images/Enter2.png"></div></div></a> 
         <a onclick="exit2();loadertoggle();move();"><div class="right"><div class="inner"><p>REBY</p><img class="button" src="images/Exit2.png"></div></div> </a> 
-
+        <p id="dropped" style="font-size: 30px; top: 70px; opacity: 1; background-color: black; ">PHONE CALL DROPPED</p>
         <HR style="height: 5px; position: relative;  top: 50px" COLOR="black" WIDTH="60%">
 
       </div>  
