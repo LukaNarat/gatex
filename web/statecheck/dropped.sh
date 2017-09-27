@@ -1,3 +1,3 @@
 #!/bin/bash
 echo "Call dropped"
-sudo rm callingactive.html
+rm /var/www/html/gatex/web/statecheck/callingactive.html
