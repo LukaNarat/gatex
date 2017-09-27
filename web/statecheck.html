@@ -1,0 +1,44 @@
+
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="functions.js"></script>
+
+
+
+<script type="text/javascript">
+    function statecheck () {
+  $.get("http://localhost:8888/gatex/web/statecheck.html")
+    .done(function() { 
+       left.className ='disappear';
+    }).fail(function() { 
+         right.className ='disappear';
+    })
+
+}
+
+    
+</script>
+
+<style type="text/css">
+    
+.disappear {
+    opacity: 0;
+
+}
+
+</style>
+  </head>
+
+  <body>
+    
+ 
+
+        <a onclick="statecheck();"> <div id="left"><p>MARY</p><img class="button" src="images/Enter2.png"></div></a> 
+      
+        <a onclick="statecheck();"> <div id="right"> <p>MARY</p><img class="button" src="images/Enter2.png"></div></a> 
+
+
+
+  </body>
+</html>
