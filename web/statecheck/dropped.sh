@@ -1,3 +1,3 @@
 #!/bin/bash
 echo "Call dropped"
-rm callingactive.html
+sudo rm callingactive.html
