@@ -47,9 +47,10 @@ function statecheck () {
             active.className ='appear';  // Pokazemo da je vzpostavljena 
             establishing.className ='disapear';
             console.log("inner 1 I am");
+            innerstatecheck();
 
 
-              function innerstatecheck () {
+              function innerstatecheck () { // < NEPRAVILNO SPISANA NESTED FUNKCIJA
               $.get("statecheck/callingactive.html")
               // Cekiramo skos ce je se vzpostavljena
                   .done(function() { // Vzpostavljena Povezava
