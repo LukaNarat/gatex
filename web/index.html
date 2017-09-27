@@ -51,7 +51,7 @@ function statecheck () {
               $.get("statecheck/callingactive.html")
               // Cekiramo skos ce je se vzpostavljena
                   .done(function() { // Vzpostavljena Povezava
-
+                    setTimeout(innerstatecheck, 2000);
                      }) 
 
 
