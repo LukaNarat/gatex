@@ -10,9 +10,10 @@
     function statecheck () {
   $.get("statecheck/callingactive.html")
     .done(function() { 
+       statecheck();
        left.className ='disappear';
     }).fail(function() { 
-         right.className ='disappear';
+        right.className ='disappear';
     })
 
 }
