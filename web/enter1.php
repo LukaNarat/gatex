@@ -3,7 +3,7 @@
 function bb()
 {
     $to      = 'trigger@applet.ifttt.com';
-    $subject = 'enter1';
+    $subject = 'maryIn';
     $message = 'Entering Gate 1';
     $headers = 'From: webmaster@example.com' . "\r\n" .
         'Reply-To: webmaster@example.com' . "\r\n" .

@@ -46,7 +46,6 @@
         }
 
 
-
      
         function exit2 () {
             $.ajax( { type : 'POST',
@@ -60,10 +59,6 @@
                   }
                 });   
         }
-
-
-
-
 
 
         function move() {
