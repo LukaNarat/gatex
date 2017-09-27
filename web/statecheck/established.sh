@@ -1,3 +1,3 @@
 #!/bin/bash
 echo "Call established succesful"
-sudo touch callingactive.html
+touch /var/www/html/gatex/web/statecheck/callingactive.html
