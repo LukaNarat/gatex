@@ -50,25 +50,6 @@ function statecheck () {
             innerstatecheck();
 
 
-              function innerstatecheck () { // < NEPRAVILNO SPISANA NESTED FUNKCIJA
-              $.get("statecheck/callingactive.html")
-              // Cekiramo skos ce je se vzpostavljena
-                  .done(function() { // Vzpostavljena Povezava
-                    setTimeout(innerstatecheck, 2000);
-                    console.log("inner I am");
-                     }) 
-
-
-
-                  .fail(function() {  // Prekinjena povezava
-                  active.className ='disapear';
-                   establishing.className ='appear'; 
-                   loader.className = 'fade';    
-                   dropped.className ='appear';  // Povemo da je konc klica, koncamo funkcijo
-
-                    } )
-              } 
-
           })   
 
         
@@ -85,6 +66,24 @@ function statecheck () {
 } 
 
 
+function innerstatecheck () { // < NEPRAVILNO SPISANA NESTED FUNKCIJA
+$.get("statecheck/callingactive.html")
+// Cekiramo skos ce je se vzpostavljena
+    .done(function() { // Vzpostavljena Povezava
+      setTimeout(innerstatecheck, 2000);
+      console.log("inner 2 I am");
+       }) 
+
+
+
+    .fail(function() {  // Prekinjena povezava
+    active.className ='disapear';
+     establishing.className ='appear'; 
+     loader.className = 'fade';    
+     dropped.className ='appear';  // Povemo da je konc klica, koncamo funkcijo
+
+      } )
+} 
 
     
 </script>
