@@ -52,7 +52,7 @@ function onloadstatecheck () {
           .done(function() { // Vzpostavljena Povezava
            loadertoggle();
             move();
-           innerstatecheck();
+            setTimeout(onloadstatecheck, 1000);
 
           })   
 

@@ -86,8 +86,16 @@
     function loadertoggle() {
     var slideSource = document.getElementById('loader');
     loader.className ='display';
-    setTimeout("loader.className = 'fade';", 50000);
-    $.get("statecheck/dropped.php"); // cleanup
+    setTimeout(function(){
+      drop()
+      "loader.className = 'fade';" 
+
+      }, 50000);
+   
 
 
 }
+
+
+function drop () {
+ $.get("statecheck/dropped.php"); // cleanup}
