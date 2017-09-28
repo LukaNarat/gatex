@@ -189,7 +189,7 @@ $.get("statecheck/callingactive.html")
     document.getElementById("strange").classList.remove("appear"); 
     var slideSource = document.getElementById('loader');
     loader.className ='display';
-    setTimeout(checkstate, 11000);
+    setTimeout(checkstate, 20000);
 
 }
 
@@ -206,8 +206,8 @@ function checkstate(){
                   }
                   else {
 
-                      console.log("active call: " + activecall);
-                      console.log("killstatecheck: " + killstatecheck);
+                  console.log("active call: " + activecall);
+                  console.log("killstatecheck: " + killstatecheck);
 
 
                   }
