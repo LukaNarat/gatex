@@ -181,3 +181,5 @@ $.get("statecheck/callingactive.html")
 
 function drop () {
  $.get("statecheck/dropped.php"); // cleanup}
+
+ }
