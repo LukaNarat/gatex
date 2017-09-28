@@ -79,8 +79,8 @@ $.get("statecheck/callingactive.html")
     .fail(function() {  // Prekinjena povezava
     console.log("Dropped");
    // active.className ='disapear';
-     active.className.remove("appear");  // Povemo da je konc klica, koncamo funkcijo
-     establishing.className.remove("disapear"); 
+     document.getElementById("active").classList.remove("appear");  // Povemo da je konc klica, koncamo funkcijo
+     document.getElementById("establishing").classList.remove("disapear"); 
      loader.className = 'fade';    
      dropped.className ='appear';
 
