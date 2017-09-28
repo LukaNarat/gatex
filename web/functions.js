@@ -29,12 +29,15 @@
 
 // } 
 
+var killstatecheck = 0;
+var activecall = 0;
+
 function statecheck () {
       document.getElementById("dropped").classList.remove("appear"); 
       $.get("statecheck/callingactive.html")
         
           .done(function() { // Vzpostavljena Povezava
-          
+            activecall = 1;
             active.className ='appear';  // Pokazemo da je vzpostavljena 
             establishing.className ='disapear';
             console.log("Established: Active");
@@ -47,7 +50,19 @@ function statecheck () {
 
           .fail(function() {  // Prekinjena povezava
 
-            setTimeout(statecheck, 1000);
+            if (killstatecheck==0) {
+                setTimeout(statecheck, 1000);
+                 console.log("killstatecheck not detected");
+              }
+            else {
+
+                      console.log("killstatecheck  detected");
+
+                  }
+            
+
+
+
             console.log("Establishing...");
           
 
@@ -70,6 +85,7 @@ $.get("statecheck/callingactive.html")
 
     .fail(function() {  // Prekinjena povezava
     console.log("Dropped");
+    activecall = 0;
    // active.className ='disapear';
      document.getElementById("active").classList.remove("appear");  // Povemo da je konc klica, koncamo funkcijo
      document.getElementById("establishing").classList.remove("disapear"); 
@@ -166,18 +182,37 @@ $.get("statecheck/callingactive.html")
 
 
     function loadertoggle() {
+       console.log("active call: " + activecall);
+   
+     killstatecheck = 0;
+     console.log("killstatecheck: " + killstatecheck);
+    document.getElementById("strange").classList.remove("appear"); 
     var slideSource = document.getElementById('loader');
     loader.className ='display';
-    setTimeout(function(){
-      drop()
-      "loader.className = 'fade';" 
-
-      }, 50000);
-   
-
+    setTimeout(checkstate, 11000);
 
 }
 
+function checkstate(){
+              if (activecall==0) {
+          // Assigning to window.numberScriptLoaded creates the global
+                  drop();
+                  strange.className = 'appear';
+                  dropped.className ='disapear';
+                  loader.className = 'fade';
+                  console.log("active call: " + activecall);
+                  console.log("killstatecheck: " + killstatecheck);
+                  killstatecheck = 1;
+                  }
+                  else {
+
+                      console.log("active call: " + activecall);
+                      console.log("killstatecheck: " + killstatecheck);
+
+
+                  }
+
+}
 
 function drop () {
  $.get("statecheck/dropped.php"); // cleanup}
