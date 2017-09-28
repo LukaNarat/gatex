@@ -9,9 +9,9 @@ function onloadstatecheck () {
       $.get("statecheck/callingactive.html")
         
           .done(function() { // Vzpostavljena Povezava
-            loadertoggle();
-            move();
-            setTimeout(onloadstatecheck, 1000);
+          var slideSource = document.getElementById('loader');
+           loader.className ='display';
+           setTimeout(onloadstatecheck, 1000);
 
           })   
 
@@ -21,7 +21,7 @@ function onloadstatecheck () {
 
             setTimeout(onloadstatecheck, 1000);
             console.log("Checking if active...");
-          
+            
 
            
         
