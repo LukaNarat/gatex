@@ -21,7 +21,7 @@ function onloadstatecheck () {
 
             setTimeout(onloadstatecheck, 1000);
             console.log("Checking if active...");
-            
+            loader.className = 'fade';
 
            
         
