@@ -1,33 +1,33 @@
-     $(document).ready(function(){ 
-      onloadstatecheck();
+     // $(document).ready(function(){ 
+     //  onloadstatecheck();
 
-     }) 
+     // }) 
 
 
 
-function onloadstatecheck () {
-      $.get("statecheck/callingactive.html")
+// function onloadstatecheck () {
+//       $.get("statecheck/callingactive.html")
         
-          .done(function() { // Vzpostavljena Povezava
-          var slideSource = document.getElementById('loader');
-           loader.className ='display';
-           setTimeout(onloadstatecheck, 1000);
+//           .done(function() { // Vzpostavljena Povezava
+//           var slideSource = document.getElementById('loader');
+//            loader.className ='display';
+//            setTimeout(onloadstatecheck, 1000);
 
-          })   
+//           })   
 
         
 
-          .fail(function() {  // Prekinjena povezava
+//           .fail(function() {  // Prekinjena povezava
 
-            setTimeout(onloadstatecheck, 1000);
-            console.log("Checking if active...");
-            loader.className = 'fade';
+//             setTimeout(onloadstatecheck, 1000);
+//             console.log("Checking if active...");
+//             loader.className = 'fade';
 
            
         
-          })
+//           })
 
-} 
+// } 
 
 function statecheck () {
       document.getElementById("dropped").classList.remove("appear"); 
