@@ -43,7 +43,7 @@ function statecheck () {
       $.get("statecheck/callingactive.html")
     
           .done(function() { // Vzpostavljena Povezava
-            
+             document.getElementById("dropped").classList.remove("appear"); 
             active.className ='appear';  // Pokazemo da je vzpostavljena 
             establishing.className ='disapear';
             console.log("Established: Active");
