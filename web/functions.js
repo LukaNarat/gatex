@@ -1,3 +1,5 @@
+// Redundant PHP->SMS calls
+
         function enter1 () {
             $.ajax( { type : 'POST',
                   data : { },
@@ -60,11 +62,12 @@
                 });   
         }
 
+// Loader Bar
 
         function move() {
   var elem = document.getElementById("myBar");
   var width = 1;
-  var id = setInterval(frame, 170);
+  var id = setInterval(frame, 100);
   function frame() {
     if (width >= 100) {
       clearInterval(id);
@@ -77,10 +80,14 @@
 }
 
 
+// Loader Cat gif
+
+
     function loadertoggle() {
     var slideSource = document.getElementById('loader');
     loader.className ='display';
-    setTimeout("loader.className = 'fade';", 60000);
+    setTimeout("loader.className = 'fade';", 50000);
+    $.get("statecheck/dropped.php"); // cleanup
 
 
 }
