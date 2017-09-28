@@ -78,10 +78,11 @@ $.get("statecheck/callingactive.html")
 
     .fail(function() {  // Prekinjena povezava
     console.log("Dropped");
-    active.className ='disapear';
-     establishing.className ='appear'; 
+   // active.className ='disapear';
+     establishing.classList.remove("disapear"); 
      loader.className = 'fade';    
-     dropped.className ='appear';  // Povemo da je konc klica, koncamo funkcijo
+     dropped.className ='appear';
+     active.classList.remove("appear");  // Povemo da je konc klica, koncamo funkcijo
 
       } )
 } 
