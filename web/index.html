@@ -26,7 +26,7 @@
   <body>
     
       <div id="title"><p id="titletext">GATEX</p></div>
-      <HR style="height: 5px; z-index: 2" COLOR="black" WIDTH="60%">
+      <HR style="height: 5px; z-index: 2; position: relative;" COLOR="black" WIDTH="60%">
       <div id="container">
         <div id="loader"> <img id = "myImage" src = "images/ajax-loader.gif"> <div class="inner" style="position: relative;
           top: -210px;"><p>ACTIVATING KITTEN TASKFORCE</p>
@@ -56,8 +56,9 @@ function statecheck () {
         
 
           .fail(function() {  // Prekinjena povezava
-          setTimeout(statecheck, 1000);
-          console.log("Establishing...");
+
+            setTimeout(statecheck, 1000);
+            console.log("Establishing...");
           
 
            
