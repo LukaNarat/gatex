@@ -1,3 +1,85 @@
+     $(document).ready(function(){ 
+      onloadstatecheck();
+
+     }) 
+
+
+
+function onloadstatecheck () {
+      $.get("statecheck/callingactive.html")
+        
+          .done(function() { // Vzpostavljena Povezava
+            loadertoggle();
+            move();
+            setTimeout(onloadstatecheck, 1000);
+
+          })   
+
+        
+
+          .fail(function() {  // Prekinjena povezava
+
+            setTimeout(onloadstatecheck, 1000);
+            console.log("Checking if active...");
+          
+
+           
+        
+          })
+
+} 
+
+function statecheck () {
+      document.getElementById("dropped").classList.remove("appear"); 
+      $.get("statecheck/callingactive.html")
+        
+          .done(function() { // Vzpostavljena Povezava
+          
+            active.className ='appear';  // Pokazemo da je vzpostavljena 
+            establishing.className ='disapear';
+            console.log("Established: Active");
+            innerstatecheck();
+
+
+          })   
+
+        
+
+          .fail(function() {  // Prekinjena povezava
+
+            setTimeout(statecheck, 1000);
+            console.log("Establishing...");
+          
+
+           
+        
+          })
+
+} 
+
+
+function innerstatecheck () { // < NEPRAVILNO SPISANA NESTED FUNKCIJA
+$.get("statecheck/callingactive.html")
+// Cekiramo skos ce je se vzpostavljena
+    .done(function() { // Vzpostavljena Povezava
+      setTimeout(innerstatecheck, 1000);
+      console.log("Still Active");
+       }) 
+
+
+
+    .fail(function() {  // Prekinjena povezava
+    console.log("Dropped");
+   // active.className ='disapear';
+     document.getElementById("active").classList.remove("appear");  // Povemo da je konc klica, koncamo funkcijo
+     document.getElementById("establishing").classList.remove("disapear"); 
+     loader.className = 'fade';    
+     dropped.className ='appear';
+
+      } )
+} 
+
+
 // Redundant PHP->SMS calls
 
         function enter1 () {
