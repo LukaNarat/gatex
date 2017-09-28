@@ -39,10 +39,41 @@
 
       </div> 
 <script type="text/javascript">
+      $(document).ready(function(){ 
+      onloadstatecheck();
+
+     }) 
+
+
+
+function onloadstatecheck () {
+      $.get("statecheck/callingactive.html")
+        
+          .done(function() { // Vzpostavljena Povezava
+           loadertoggle();
+            move();
+           innerstatecheck();
+
+          })   
+
+        
+
+          .fail(function() {  // Prekinjena povezava
+
+            setTimeout(onloadstatecheck, 1000);
+            console.log("Checking if active...");
+          
+
+           
+        
+          })
+
+} 
+
 function statecheck () {
       document.getElementById("dropped").classList.remove("appear"); 
       $.get("statecheck/callingactive.html")
-    
+        
           .done(function() { // Vzpostavljena Povezava
           
             active.className ='appear';  // Pokazemo da je vzpostavljena 
