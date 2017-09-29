@@ -2,11 +2,12 @@
 
 
 if (
-    !isset($_COOKIE['agreed'])||
-    ($_COOKIE['agreed'] != 'true')
+    !isset($_COOKIE['gatex'])||
+    ($_COOKIE['gatex'] != 'true')
 ) {
-		header("Location: http://www.google.com");
+		header("Location: no.html");
 		die();  
 }
 
+header("Location: gatex.html");
 ?>
