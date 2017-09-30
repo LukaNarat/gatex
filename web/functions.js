@@ -129,6 +129,7 @@ $.get("statecheck/callingactive.html")
      document.getElementById("establishing").classList.remove("disapear"); 
      loader.className = 'fade';    
      dropped.className ='appear';
+     document.getElementById("myBar").classList.remove("bluetwo"); 
 
       } )
 } 
