@@ -90,7 +90,7 @@ p {
 } 
 
 .bluetwo {
-  background-color: #34DDEE;
+  background-color: #34DDEE !important;
 } 
 
   body {
