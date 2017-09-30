@@ -5,7 +5,7 @@ if (
     !isset($_COOKIE['gatex'])||
     ($_COOKIE['gatex'] != 'true')
 ) {
-		header("Location: no.html");
+		header("Location: gatex.html");
 		die();  
 }
 
