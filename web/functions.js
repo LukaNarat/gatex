@@ -33,7 +33,7 @@ function doSomething() {
     if (myCookie == null) {
         // do cookie doesn't exist stuff;
           console.log("no cookie") 
-          document.location.href = "no.html";
+         // document.location.href = "no.html";
 
 
     }
