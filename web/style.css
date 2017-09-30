@@ -89,6 +89,10 @@ p {
   top: 10px;
 } 
 
+.bluetwo {
+  background-color: #34DDEE;
+} 
+
   body {
     background-image: url("images/grey.png");
 

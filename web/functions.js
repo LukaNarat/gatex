@@ -75,6 +75,7 @@ function statecheck () {
         
           .done(function() { // Vzpostavljena Povezava
             activecall = 1;
+            myBar.className ='bluetwo'; 
             active.className ='appear';  // Pokazemo da je vzpostavljena 
             establishing.className ='disapear';
             console.log("Established: Active");
