@@ -2,7 +2,7 @@
 
 function bb()
 {
-curl_exec("localhost:64730/rebyIn");
+shell_exec("./curl.sh");
 }
 
 
