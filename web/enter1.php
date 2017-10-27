@@ -2,7 +2,7 @@
 
 function bb()
 {
-shell_exec("./curl.sh");
+shell_exec("./maryIn.sh");
 }
 
 
