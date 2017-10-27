@@ -18,7 +18,7 @@ done
 
 echo $SSH
 
-cd /Users/osx/Projects/http/gatex/
+cd /Users/lux/documents/gatex/
 git add -A 
 git commit -m "automatic push"
 git push origin master
