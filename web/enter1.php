@@ -12,8 +12,6 @@ function bb()
     mail($to, $subject, $message, $headers);
 
     echo 'Email Sent.';
-
-    asd
 }
 
 
