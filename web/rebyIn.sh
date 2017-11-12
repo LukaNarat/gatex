@@ -1,3 +1,3 @@
 #!/bin/bash
 
-curl localhost:64730/rebyIn
+curl lumaluma.dlinkddns.com:64730/rebyIn

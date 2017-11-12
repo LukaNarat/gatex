@@ -1,3 +1,3 @@
 #!/bin/bash
 
-curl localhost:64730/maryOut
+curl lumaluma.dlinkddns.com:64730/maryOut
